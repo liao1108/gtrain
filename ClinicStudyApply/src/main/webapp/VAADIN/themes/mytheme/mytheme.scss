@@ -1,0 +1,431 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+$v-font-size: 18px;
+$v-font-weight: 500;
+$v-font-family: "Open Sans", Myriad, Helvetica, Tahoma, Arial, clean, sans-serif, Raleway;
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@import "../valo/valo.scss";
+              
+@mixin mytheme {
+  @include valo;
+
+ // Insert your own theme rules here
+ .v-app-loading::before {
+    opacity: .8; 
+    filter: alpha(opacity=80); 
+    width: 200px; height: 200px; 
+    background: transparent url(images/loader.gif); 
+ }  
+  
+ background: url("images/paper2.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+  
+ .v-grid-myGridFile .v-nativebutton {
+  	color: #0000FF;
+  	background: transparent;
+	text-decoration:underline;
+	border: none;
+	padding-left: 0px;
+	cursor:pointer;
+ }
+  
+ .v-grid-row-focused{
+    color: #FD3207;
+    font-weight: bold;
+ }
+  
+ .v-grid-row-selected > .v-grid-cell {
+    background-image: none;
+    border-color: #d4d4d4;
+    color: inherit;
+    text-shadow: inherit;
+ }
+  
+ .gridfile-padding {
+  	padding-left: 10px;
+ }
+ 
+ .v-splitpanel-hsplitter div {
+ 	width: 6px;
+ }
+  
+ .my-image-button {
+	cursor: pointer;
+ }
+  
+ .my-image-border {
+ 	border: 1px solid lightgray;
+ } 
+ 
+   .v-image-vgh {
+ 		border: 1px solid lightgray;
+ 		background-color: white;
+   } 
+   
+   .font-red {
+   		color: darkred;
+   }
+   
+  .halftone-whip{  
+  		background-color: rgba(255, 239, 213, 0.9) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		//font-family: Microsoft JhengHei;
+  		//font-weight: bold;
+  }
+  
+  .halftone-whip-border{  
+  		background-color: rgba(255, 239, 213, 0.9) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		//font-family: Microsoft JhengHei;
+  		//font-weight: bold;
+  		
+  		border-radius: 12px;
+      	border: 1px solid lightgray;
+  }
+
+  .halftone-ivory{  
+  		background-color: rgba(255, 255, 240, 0.9) !important;
+  		color: darkblue;
+  }
+
+  .halftone-snow{  
+  		background-color: rgba(255, 250, 250, 0.6) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		//font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-yellow{  
+  		background-color: rgba(255,255,224, 0.95) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		//font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-purple{  
+  		background-color: rgba(241,236,253,0.95) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		//font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-blue{  
+  		background-color: rgba(240,255,255,0.95) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		//font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-green{  
+  		background-color: rgba(211, 246, 242,0.95) !important;
+  		color: darkred;
+  		//font-family: Microsoft JhengHei;
+  }
+  
+  .transparent{  
+  	background: transparent;
+  }
+  
+  .v-formlayout .v-caption {
+  	font-size: 100%;
+  }
+  
+  .v-tabsheet-vgh  .v-captiontext {
+    font-size: 110%;
+  }
+   
+  .v-upload-link .v-button {
+    @extend .v-button-link;
+  } 
+    
+  .wrapLine{
+  	 word-wrap: break-word; /* IE  */
+  	 white-space: pre-wrap;
+  }
+   
+  .red{
+    color: red;
+  }
+  
+  .v-gridlayout-border {
+      border-style: solid;
+      border-width: 1px;
+      border-color: darkgray;
+  }
+  
+  .v-panel {
+  	border-color: #d3d3d3;
+  	//border-radius: 10px;
+  	color: rgb(113,111,110) !important;
+  	//background: rgba(240, 248, 255, 0.95) !important;
+  }
+  
+  .v-panel-caption {
+  	font-size: 100%;
+  	//height: 32px;
+  	//background: #446E9B !important;
+  	background: #9fc5e8 !important;
+  	color: black !important;
+  }
+  
+  .panel-tileless-corner {
+  	border-radius: 10px;
+  }
+  
+  .font75{
+  	  font-size: 80%;
+  }
+  
+  .font90-red{
+  	  font-size: 90%;
+  	  color: red;
+  	  line-height: 100%;
+  }
+  
+  .font80-red{
+  	  font-size: 80%;
+  	  color: red;
+  	  line-height: 100%;
+  }
+  
+  .font80-gray{
+  	  font-size: 80%;
+  	  color: #676666;
+  	  //line-height: 100%;
+  }
+
+  .v-verticallayout-font75 {
+  	  line-height: 100%;
+  	  color: darkblue;
+  }
+  
+  .v-textfield-readonly {
+	  background: lightgray;
+  }
+  
+  .csslayout-applicant {
+    	&[width-range~="0-600px"] {
+      		.v-verticallayout {
+        		width: 100% !important;
+        		padding-right: 10px;
+      		}
+    	}
+
+	    &[width-range~="601px-900px"] {
+    	    .v-verticallayout {
+        	  width: 50% !important;
+        	  padding-right: 10px;
+            }
+      	}
+      	
+      	&[width-range~="901px-1200px"] {
+    	    .v-verticallayout {
+        	  width: 33.33% !important;
+        	  padding-right: 10px;
+            }
+      	}
+      	
+      	&[width-range~="1201px-"] {
+    	    .v-verticallayout {
+        	  width: 16.66% !important;
+        	  padding-right: 10px;
+            }
+      	}
+  }
+  
+  .v-csslayout-cols-2 {
+  	  &[width-range~="0-1000px"] {
+      	.v-verticallayout {
+       		width: 100% !important;
+       		padding-right: 10px;
+      	}
+      }
+  
+  	  &[width-range~="1001px-"] {
+      	.v-verticallayout {
+       		width: 50% !important;
+       		padding-right: 10px;
+      	}
+      }
+  }
+
+  .v-csslayout-cols-3 {
+  	  &[width-range~="0-800px"] {
+      	.v-verticallayout {
+       		width: 100% !important;
+       		padding-right: 10px;
+      	}
+      }
+  
+  	  &[width-range~="801px-"] {
+      	.v-verticallayout {
+       		width: 33.3% !important;
+       		padding-right: 10px;
+      	}
+      }
+  }
+  
+  .v-csslayout-cols-4 {
+  	  &[width-range~="0-600px"] {
+      	.v-verticallayout {
+       		width: 100% !important;
+       		padding-right: 10px;
+      	}
+      }
+  
+  	  &[width-range~="601-1000px"] {
+      	.v-verticallayout {
+       		width: 50% !important;
+       		padding-right: 10px;
+      	}
+      }
+
+  	  &[width-range~="1001px-"] {
+      	.v-verticallayout {
+       		width: 25% !important;
+       		padding-right: 10px;
+      	}
+      }
+  }
+
+  .v-csslayout-cols-6 {
+    	&[width-range~="0-600px"] {
+      		.v-verticallayout {
+        		width: 100% !important;
+        		padding-right: 10px;
+      		}
+    	}
+
+	    &[width-range~="601px-900px"] {
+    	    .v-verticallayout {
+        	  width: 50% !important;
+        	  padding-right: 10px;
+            }
+      	}
+      	
+      	&[width-range~="901px-1200px"] {
+    	    .v-verticallayout {
+        	  width: 33.33% !important;
+        	  padding-right: 10px;
+            }
+      	}
+      	
+      	&[width-range~="1201px-"] {
+    	    .v-verticallayout {
+        	  width: 16.66% !important;
+        	  padding-right: 10px;
+            }
+      	}
+  }
+
+  .csslayout-80x20 {
+  		&[width-range~="0-800px"] {
+      		.vbox1 {
+        		width: 100% !important;
+        		padding-right: 10px;
+      		}
+      		
+      		.vbox2 {
+        		padding-right: 10px;
+      		}
+    	}
+
+	    &[width-range~="801px-"] {
+    	    .vbox1 {
+        	  width: 80% !important;
+        	  padding-right: 10px;
+            }
+            
+            .vbox2 {
+              width: 20% !important;
+        	  padding-right: 10px;
+            }
+      	}
+  }
+  
+  .v-csslayout-container {
+  	   vertical-align: bottom;
+  }
+  
+  .v-textfield-csslayout {
+	   margin-right: 10px;
+	   vertical-align: bottom;
+  }
+  
+  .v-filterselect-csslayout {
+  	  margin-right: 10px;
+  }
+  
+  .layout-bottom-10px {
+  	line-height: 100%;
+  	margin-bottom: 10px;
+  }
+  
+  .base-color {
+	  color: darkblue;
+  }
+  
+  .v-gridlayout {
+  	  width: 100%	!important;
+      .v-gridlayout-slot {
+          background: #F0F8FF;
+        
+          padding-top: 5px;
+      	  padding-bottom: 5px;
+      	  padding-left: 5px;
+      	  padding-right: 5px;
+   	  }
+  }
+  
+  	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    	color:    #D3D3D3;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color:    #D3D3D3;
+	   opacity:  1;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color:    #D3D3D3;
+	   opacity:  1;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   color:    #D3D3D3;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+	   color:    #D3D3D3;
+	}
+	::placeholder { /* Most modern browsers support this now. */
+	   color:    #D3D3D3;
+	}
+  
+}

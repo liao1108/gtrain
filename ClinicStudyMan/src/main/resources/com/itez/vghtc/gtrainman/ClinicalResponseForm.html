@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-panel caption="臨床單位簽核結果回覆" size-full>
+    <vaadin-vertical-layout style-name="margin-small base-color">
+     <vaadin-form-layout>
+      <vaadin-text-field caption="案件摘要：" style-name="small" width-full _id="txtCaseInfo"></vaadin-text-field>
+      <vaadin-radio-button-group caption="同意來院：" style-name="horizontal" data-item-type="java.lang.String" _id="rbgAgree">
+       <option item="同意">同意來院進修</option>
+       <option item="不同意">不同意</option>
+      </vaadin-radio-button-group>
+      <vaadin-text-field caption="不同意原因：" width-full _id="txtReason"></vaadin-text-field>
+      <vaadin-text-field caption="進修費用：" width-full _id="txtTuition"></vaadin-text-field>
+      <vaadin-text-field caption="報衛福部申請書：" width-full _id="txtMohwFile"></vaadin-text-field>
+      <vaadin-upload button-caption="上傳報衛福部申請書" _id="uploadMohwFile"></vaadin-upload>
+      <vaadin-horizontal-layout width-full>
+       <vaadin-button icon="fonticon://Vaadin-Icons/e622" style-name="primary" plain-text _id="btnSend" :center>
+         送出簽核結果 
+       </vaadin-button>
+      </vaadin-horizontal-layout>
+     </vaadin-form-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+  </vaadin-vertical-layout>
+ </body>
+</html>

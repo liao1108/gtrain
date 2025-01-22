@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-horizontal-split-panel split-position="30%">
+    <vaadin-horizontal-layout size-full>
+     <vaadin-panel size-full :expand>
+      <vaadin-vertical-layout style-name="margin-small" size-full>
+       <vaadin-radio-button-group caption="參數類別：" width="99%" height-full data-item-type="java.lang.String" _id="rbgParams">
+        <option item="Option1">A</option>
+        <option item="Option2">B</option>
+        <option item="Option3">C</option>
+       </vaadin-radio-button-group>
+      </vaadin-vertical-layout>
+     </vaadin-panel>
+     <vaadin-label width="0px" plain-text></vaadin-label>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout width="99%" height-full>
+     <vaadin-label width="1px" plain-text></vaadin-label>
+     <vaadin-panel style-name="primary" size-full _id="btnSubmit" :expand>
+      <vaadin-vertical-layout size-full>
+       <vaadin-text-area caption="內容：" width="99%" height-full _id="txtJson" :right :expand></vaadin-text-area>
+       <vaadin-horizontal-layout spacing="false" width-full _id="layoutUpload" :right></vaadin-horizontal-layout>
+      </vaadin-vertical-layout>
+     </vaadin-panel>
+    </vaadin-horizontal-layout>
+   </vaadin-horizontal-split-panel>
+  </vaadin-vertical-layout>
+ </body>
+</html>

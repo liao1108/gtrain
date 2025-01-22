@@ -1,0 +1,328 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+$v-font-size: 48px;
+$v-font-weight: 600;
+$v-font-family: Myriad, Helvetica, Tahoma, Arial, clean, sans-serif, "Open Sans";
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@import "../valo/valo.scss";
+
+@mixin mytheme-mobile {
+  @include valo;
+
+  // Insert your own theme rules here
+.v-app-loading::before {
+    opacity: .8; 
+    filter: alpha(opacity=80); 
+    width: 200px; height: 200px; 
+    background: transparent url(images/loader.gif); 
+ }  
+  
+//background: url("images/clerk_bg.jpg") no-repeat center center fixed;
+//  -webkit-background-size: cover;
+//  -moz-background-size: cover;
+//  -o-background-size: cover;
+//  background-size: cover;
+  
+ .v-grid-myGridFile .v-nativebutton {
+  	color: #0000FF;
+  	background: transparent;
+	text-decoration:underline;
+	border: none;
+	padding-left: 0px;
+	cursor:pointer;
+  }
+  
+  .v-grid-row-focused{
+    color: #FD3207;
+    font-weight: bold;
+  }
+  
+  .v-grid-row-selected > .v-grid-cell {
+    background-image: none;
+    border-color: #d4d4d4;
+    color: inherit;
+    text-shadow: inherit;
+  }
+  
+  .gridfile-padding {
+  	padding-left: 10px;
+  }
+ 
+  .v-splitpanel-hsplitter div {
+ 	width: 6px;
+  }  
+  
+  .my-image-button {
+	cursor: pointer;
+  }
+  
+  .my-image-border {
+ 		border: 1px solid lightgray;
+   } 
+ 
+   .v-image-vgh {
+ 		border: 1px solid lightgray;
+ 		background-color: white;
+   } 
+   
+   .font-red {
+   		color: darkred;
+   }
+   
+  .halftone-whip{  
+  		background-color: rgba(255, 239, 213, 0.9) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-whip-border{  
+  		background-color: rgba(255, 239, 213, 0.9) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		font-family: Microsoft JhengHei;
+  		
+  		border-radius: 12px;
+      	border: 1px solid lightgray;
+  }
+
+  .halftone-ivory{  
+  		background-color: rgba(255, 255, 240, 0.9) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		font-family: Microsoft JhengHei;
+  }
+
+  .halftone-snow{  
+  		background-color: rgba(255, 250, 250, 0.9) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-yellow{  
+  		background-color: rgba(255,255,224, 0.95) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-purple{  
+  		background-color: rgba(241,236,253,0.95) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-blue{  
+  		background-color: rgba(240,255,255,0.95) !important;
+  		color: darkblue;
+  		font-size: 100%;
+  		font-family: Microsoft JhengHei;
+  }
+  
+  .halftone-green{  
+  		background-color: rgba(211, 246, 242,0.95) !important;
+  		color: darkred;
+  		font-family: Microsoft JhengHei;
+  }  
+    
+  .transparent{  
+  		background: transparent;
+  }
+  
+  .v-formlayout .v-caption {
+  		font-size: 100%;
+  }
+  
+  .v-tabsheet-vgh  .v-captiontext {
+      	font-size: 110%;
+  }
+   
+   .v-upload-link .v-button {
+        @extend .v-button-link;
+    } 
+  
+  .wrapLine{
+   		word-wrap: break-word; /* IE  */
+   		white-space: pre-wrap;
+  }
+   
+  .red{
+    color: red;
+  }
+  
+  .v-gridlayout-border {
+      border-style: solid;
+      border-width: 1px;
+      border-color: darkgray;
+  }
+  
+  .v-panel {
+  	border-color: #446E9B;
+  	//border-radius: 10px;
+  	color: rgb(113,111,110) !important;
+  	//background: rgba(240, 248, 255, 0.95) !important;
+  }
+  
+  .v-panel-caption {
+  	font-size: 120%;
+  	//height: 32px;
+  	background: #446E9B !important;
+  	color: white !important;
+  }
+  
+  .font75{
+  	  font-size: 80%;
+  }
+  
+  .font90-red{
+  	  font-size: 90%;
+  	  color: red;
+  	  line-height: 100%;
+  }
+  
+  .font80-red{
+  	  font-size: 80%;
+  	  color: red;
+  	  line-height: 100%;
+  }
+  
+  .font80-gray{
+  	  font-size: 80%;
+  	  color: #676666;
+  	  //line-height: 100%;
+  }
+
+  .v-verticallayout-font75 {
+  	  line-height: 100%;
+  	  color: darkblue;
+  }
+  
+  .v-textfield-readonly {
+	  background: lightgray;
+  }
+  
+  .csslayout-applicant {
+    	&[width-range~="0-1200px"] {
+      		.v-verticallayout {
+        		width: 100% !important;
+        		padding-right: 10px;
+      		}
+    	}
+
+	    &[width-range~="12001px-"] {
+    	    .v-verticallayout {
+        	  width: 50% !important;
+        	  padding-right: 10px;
+            }
+      	}
+  }
+  
+  .v-csslayout-cols-2 {
+		.v-verticallayout {
+   			width: 100% !important;
+   			padding-right: 10px;
+  		}
+  }
+  
+  .v-csslayout-cols-3 {
+     .v-verticallayout {
+     	width: 100% !important;
+     	padding-right: 10px;
+     }
+      
+  }
+  
+  .v-csslayout-cols-4 {
+    	.v-verticallayout {
+       		width: 100% !important;
+       		padding-right: 10px;
+      	}
+  }
+  
+
+  .v-csslayout-cols-6 {
+    	.v-verticallayout {
+       		width: 100% !important;
+       		padding-right: 10px;
+      	}
+  }
+  
+  .csslayout-80x20 {
+	.vbox1 {
+   		width: 100% !important;
+   		padding-right: 10px;
+	}
+  		
+	.vbox2 {
+		width: 100% !important;
+  		padding-right: 10px;
+	}
+  }
+  
+  .v-csslayout-container {
+  	   vertical-align: bottom;
+  }
+  
+  .v-textfield-csslayout {
+	   margin-right: 10px;
+	   vertical-align: bottom;
+  }
+  
+  .v-filterselect-csslayout {
+  	  margin-right: 10px;
+  }
+  
+  .layout-bottom-10px {
+  	line-height: 100%;
+  	margin-bottom: 10px;
+  }
+  
+  .base-color {  
+	  color: darkblue;
+  }
+  
+  .v-gridlayout {
+  	  width: 100%	!important;
+      .v-gridlayout-slot {
+          background: #F0F8FF;
+        
+          padding-top: 5px;
+      	  padding-bottom: 5px;
+      	  padding-left: 5px;
+      	  padding-right: 5px;
+   	  }
+  }
+  
+  
+  .v-margin-left   {padding-left:   10px;}
+  .v-margin-right  {padding-right:  10px;}
+  .v-margin-top    {padding-top:    10px;}
+  .v-margin-bottom {padding-bottom: 10px;}  
+}

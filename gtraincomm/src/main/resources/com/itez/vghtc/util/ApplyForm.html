@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout style-name="halftone-snow">
+   <vaadin-panel icon="fonticon://Vaadin-Icons/e962" caption="Your Profile" responsive _id="panelProfile" :expand>
+    <vaadin-vertical-layout style-name="base-color">
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-text-field caption-as-html required-indicator-visible caption="Name in English" width-full data-property-id="personNameEn" _id="txtPersonNameEn"></vaadin-text-field>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-text-field caption="Name in Chinese" width-full data-property-id="personNameCh" _id="txtPersonNameCh"></vaadin-text-field>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-text-field required-indicator-visible caption="Passport number" width-full data-property-id="passportNo" _id="txtPassportNo"></vaadin-text-field>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-combo-box popup-width="null" required-indicator-visible caption="Your nationality" page-length="0" empty-selection-allowed="false" width-full data-item-type="com.itez.vghtc.util.Nation" _id="combNation"></vaadin-combo-box>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-radio-button-group required-indicator-visible caption="Gender:" style-name="horizontal" width-full data-item-type="java.lang.String" data-property-id="gender" _id="rbgGender">
+        <option item="male">male</option>
+        <option item="female">female</option>
+       </vaadin-radio-button-group>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-date-field required-indicator-visible caption="Birthday" width-full _id="dateBirth"></vaadin-date-field>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-radio-button-group required-indicator-visible caption="Role status:" style-name="horizontal" width-full data-item-type="java.lang.String" data-property-id="roleStatus" _id="rbgRoleStatus">
+        <option item="resident">resident</option>
+        <option item="doctor">doctor</option>
+        <option item="nurse">nurse</option>
+        <option item="pharmacist">pharmacist</option>
+        <option item="nutritionist">nutritionist</option>
+        <option item="others">others</option>
+       </vaadin-radio-button-group>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-text-field caption="if other role, please specify here" width-full data-property-id="elseRole" _id="txtElseRole"></vaadin-text-field>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-text-field required-indicator-visible caption="Name of Affiliation" width-full data-property-id="affiliation" _id="txtAffiliation"></vaadin-text-field>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-combo-box popup-width="null" required-indicator-visible caption="Location of school" page-length="0" width-full data-item-type="com.itez.vghtc.util.Nation" _id="combSchoolLocation"></vaadin-combo-box>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-panel icon="fonticon://Vaadin-Icons/e77e" caption="Chinese proficiency" _id="panelChinese">
+    <vaadin-vertical-layout style-name="base-color">
+     <vaadin-form-layout margin="false">
+      <vaadin-radio-button-group required-indicator-visible caption="Listening:" style-name="horizontal" width-full data-item-type="java.lang.String" data-property-id="chListening" _id="rbgChListening">
+       <option item="native">native</option>
+       <option item="nearly native">nearly native</option>
+       <option item="high-intermediate">high-intermediate</option>
+       <option item="intermediate">intermediate</option>
+       <option item="basic">basic</option>
+       <option item="none">none</option>
+      </vaadin-radio-button-group>
+      <vaadin-radio-button-group required-indicator-visible caption="Speaking:" style-name="horizontal" width-full data-item-type="java.lang.String" data-property-id="chSpeaking" _id="rbgChSpeaking">
+       <option item="native">native</option>
+       <option item="nearly native">nearly native</option>
+       <option item="high-intermediate">high-intermediate</option>
+       <option item="intermediate">intermediate</option>
+       <option item="basic">basic</option>
+       <option item="none">none</option>
+      </vaadin-radio-button-group>
+      <vaadin-radio-button-group required-indicator-visible caption="Reading:" style-name="horizontal" width-full data-item-type="java.lang.String" data-property-id="chReading" _id="rbgChReading">
+       <option item="native">native</option>
+       <option item="nearly native">nearly native</option>
+       <option item="high-intermediate">high-intermediate</option>
+       <option item="intermediate">intermediate</option>
+       <option item="basic">basic</option>
+       <option item="none">none</option>
+      </vaadin-radio-button-group>
+      <vaadin-radio-button-group required-indicator-visible caption="Writing:" style-name="horizontal" width-full data-item-type="java.lang.String" data-property-id="chWriting" _id="rbgChWriting">
+       <option item="native">native</option>
+       <option item="nearly native">nearly native</option>
+       <option item="high-intermediate">high-intermediate</option>
+       <option item="intermediate">intermediate</option>
+       <option item="basic">basic</option>
+       <option item="none">none</option>
+      </vaadin-radio-button-group>
+     </vaadin-form-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-panel icon="fonticon://Vaadin-Icons/e76d" caption="Your contact information" _id="panelContact">
+    <vaadin-vertical-layout style-name="base-color">
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-text-field required-indicator-visible caption="e-mail address" width-full data-property-id="email" _id="txtEmail"></vaadin-text-field>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-text-field caption="Mailing address" width-full data-property-id="mailAddress" _id="txtMailAddress"></vaadin-text-field>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-text-field caption="Phone/Cell number" width-full data-property-id="phoneNo" _id="txtPhoneNo"></vaadin-text-field>
+     <vaadin-label style-name="font-red" width-full plain-text>
+       * Emergency Contact Information in Taiwan (if applicable) 
+     </vaadin-label>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-text-field caption="Name" width-full data-property-id="contactName" _id="txtContactName"></vaadin-text-field>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-text-field caption="Relation to You" width-full data-property-id="contactRelation" _id="txtContactRelation"></vaadin-text-field>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" responsive margin="false">
+       <vaadin-text-field caption="Address" width-full data-property-id="contactAddress" _id="txtContactAddress"></vaadin-text-field>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-text-field caption="Phone/Cell number" width-full data-property-id="contactPhone" _id="txtContactPhone"></vaadin-text-field>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-panel icon="fonticon://Vaadin-Icons/e633" caption="Your study plan" _id="panelChoiceOfDivi">
+    <vaadin-vertical-layout style-name="base-color">
+     <vaadin-text-area required-indicator-visible caption="Please brief Your training goals:" rows="4" width-full data-property-id="trainGoal" _id="txtTrainGoal"></vaadin-text-area>
+     <vaadin-text-area caption="Please brief Your interesting fields:" rows="4" width-full data-property-id="interestField" _id="txtInterestField"></vaadin-text-area>
+     <vaadin-grid-layout caption-as-html caption="<strong>Choice of Departments or Divisions: Period date is in Taipei Local Time (GMT+8)</strong>" spacing width-full _id="gridlayoutChoice">
+      <row>
+       <column expand="1.0">
+        <vaadin-vertical-layout spacing="false" margin="false" _id="layoutRowChoice">
+         <vaadin-css-layout style-name="cols-4" responsive width-full>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-combo-box popup-width="null" required-indicator-visible caption="Department" page-length="0" width-full data-item-type="com.itez.vghtc.util.Dept" _id="combDept" :expand></vaadin-combo-box>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-combo-box popup-width="null" caption="Division" page-length="0" width-full data-item-type="com.itez.vghtc.util.Divi" _id="combDivi" :expand></vaadin-combo-box>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-date-field required-indicator-visible caption="Period from" width-full _id="dateFromChoice" :expand></vaadin-date-field>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-date-field required-indicator-visible caption="Period end" width-full _id="dateEndChoice" :expand></vaadin-date-field>
+          </vaadin-vertical-layout>
+         </vaadin-css-layout>
+         <vaadin-vertical-layout margin-right="false" margin-top="false" margin-bottom="false">
+          <vaadin-css-layout caption-as-html caption="<strong>指導醫師一</strong>" style-name="cols-4" responsive width-full _id="csslayoutTeacher1">
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師姓名(英文)" width-full _id="txtTeacherNameEn1"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師姓名(中文)" width-full _id="txtTeacherNameCh1"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師電子郵件" width-full _id="txtTeacherEmail1"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="公務機號碼" width-full _id="txtTeacherPhone1"></vaadin-text-field>
+           </vaadin-vertical-layout>
+          </vaadin-css-layout>
+          <vaadin-css-layout caption-as-html caption="<strong>指導醫師二</strong>" style-name="cols-4" responsive width-full _id="csslayoutTeacher2">
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師姓名(英文)" width-full _id="txtTeacherNameEn2"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師姓名(中文)" width-full _id="txtTeacherNameCh2"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師電子郵件" width-full _id="txtTeacherEmail2"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="公務機號碼" width-full _id="txtTeacherPhone2"></vaadin-text-field>
+           </vaadin-vertical-layout>
+          </vaadin-css-layout>
+          <vaadin-css-layout caption-as-html caption="<strong>指導醫師三</strong>" style-name="cols-4" responsive width-full _id="csslayoutTeacher3">
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師姓名(英文)" width-full _id="txtTeacherNameEn3"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師姓名(中文)" width-full _id="txtTeacherNameCh3"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="醫師電子郵件" width-full _id="txtTeacherEmail3"></vaadin-text-field>
+           </vaadin-vertical-layout>
+           <vaadin-vertical-layout spacing="false" margin="false">
+            <vaadin-text-field caption="公務機號碼" width-full _id="txtTeacherPhone3"></vaadin-text-field>
+           </vaadin-vertical-layout>
+          </vaadin-css-layout>
+         </vaadin-vertical-layout>
+        </vaadin-vertical-layout>
+       </column>
+       <column>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e801" description="Add a new Choice of Division" plain-text _id="btnNewChoice" :bottom :center></vaadin-button>
+       </column>
+      </row>
+     </vaadin-grid-layout>
+     <vaadin-horizontal-layout width-full _id="layoutTuition">
+      <vaadin-label plain-text :middle>
+        進修費合計： 
+      </vaadin-label>
+      <vaadin-text-field></vaadin-text-field>
+      <vaadin-label width-full plain-text :expand></vaadin-label>
+     </vaadin-horizontal-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-panel caption="COVID-19 vaccination records" _id="panelCovid">
+    <vaadin-vertical-layout style-name="base-color">
+     <vaadin-grid-layout caption-as-html caption="<strong>Choice of Divisions or Departments: Taipei Local Time (GMT+8)</strong>" spacing width-full _id="gridlayoutVacci">
+      <row>
+       <column expand="1.0">
+        <vaadin-vertical-layout spacing="false" margin="false" _id="layoutRowVacci">
+         <vaadin-css-layout style-name="cols-4" responsive width-full>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-date-field caption="Vaccination date" width-full _id="dateVaccin"></vaadin-date-field>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-text-field caption="Vaccination Place/Hospital" width-full _id="txtPlaceVacci"></vaadin-text-field>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-combo-box popup-width="null" caption="Vaccine vender" page-length="0" width-full data-item-type="java.lang.String" _id="combVender" :expand></vaadin-combo-box>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-text-field caption="Other vender, please specify" width-full _id="txtElseVender"></vaadin-text-field>
+          </vaadin-vertical-layout>
+         </vaadin-css-layout>
+        </vaadin-vertical-layout>
+       </column>
+       <column>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e801" description="Add new vaccination record" plain-text _id="btnNewVacci" :bottom :center></vaadin-button>
+       </column>
+      </row>
+     </vaadin-grid-layout>
+     <vaadin-vertical-layout spacing="false" height="400px" margin="false">
+      <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Proof of Vaccination" style-name="my-image-border" size-full _id="frameCovid" :expand></vaadin-browser-frame>
+     </vaadin-vertical-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-panel icon="fonticon://Vaadin-Icons/e7ec" caption="Accommodation" _id="panelAccomm">
+    <vaadin-vertical-layout>
+     <vaadin-radio-button-group style-name="horizontal" data-item-type="java.lang.String" data-property-id="accommType" _id="rbgAccommdation">
+      <option item="No Need" selected>No Need</option>
+      <option item="Shared Room">Shared Room</option>
+      <option item="Single Room">Single Room</option>
+     </vaadin-radio-button-group>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-panel icon="fonticon://Vaadin-Icons/e7e1" caption="Supporting documents needed" _id="panelSupportingDocs">
+    <vaadin-vertical-layout style-name="base-color">
+     <vaadin-horizontal-layout caption="Photo:" style-name="base-color" width-full>
+      <vaadin-vertical-layout spacing="false" width="250px" height="280px" margin="false">
+       <vaadin-browser-frame style-name="my-image-border" size-full _id="framePhoto" :expand></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+      <vaadin-label responsive width-full :expand>
+        You must provide 1 photo with your application. Requirements for a Good Photo: 
+       <ul>
+        <li>Photo size: approximately 2 x 2 inches (50 mm wide x 50 mm high);</li>
+        <li>Image type: JPEG;</li>
+        <li>More than 300 DPI or PPI.</li>
+        <li>File size less than 50KB.</li>
+       </ul>
+      </vaadin-label>
+     </vaadin-horizontal-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Copy of Your passport:" style-name="my-image-border" width-full height="500px" _id="framePassport"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Copy of Your related professional licensure:" style-name="my-image-border" width-full height="500px" _id="framelicensure"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Copy of Your diploma and/or certificates:" style-name="my-image-border" width-full height="500px" _id="frameDiploma"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Copy of recommendation letter or the proof of clinical work experience" style-name="my-image-border" width-full height="500px" _id="frameRecommend"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Your curriculum vitae:" style-name="my-image-border" width-full height="500px" _id="frameCV"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Copy of Your health check report:" style-name="my-image-border" width-full height="500px" _id="frameHealthCheck"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-panel icon="fonticon://Vaadin-Icons/e92d" caption="Documents after approval" _id="panelFlight">
+    <vaadin-vertical-layout style-name="base-color">
+     <vaadin-css-layout style-name="cols-2" responsive width-full>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Your flight schedule:" style-name="my-image-border" width-full height="500px" _id="frameFlight"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Your health insurance (over NT$1,000,000)" style-name="my-image-border" width-full height="500px" _id="frameInsurance"></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-horizontal-layout width-full>
+    <vaadin-button description="Application form can be modified latter" style-name="friendly" width-full plain-text _id="btnSave" :expand>
+      Temporary Save 
+    </vaadin-button>
+    <vaadin-button style-name="primary" width-full plain-text _id="btnSubmit" :expand>
+      Submit the application 
+    </vaadin-button>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full margin="false">
+   <vaadin-tab-sheet size-full _id="tabSheet">
+    <tab caption="案件管理" icon="fonticon://Vaadin-Icons/e737" selected>
+     <vaadin-vertical-layout size-full _id="tabCases">
+      <vaadin-horizontal-layout width-full>
+       <vaadin-radio-button-group style-name="horizontal" width-full data-item-type="java.lang.String" _id="rbgStage" :expand>
+        <option item="Option1">Option 1</option>
+        <option item="Option2">Option 2</option>
+        <option item="Option3">Option 3</option>
+       </vaadin-radio-button-group>
+       <vaadin-form-layout size-auto margin-left margin-top="false" margin-bottom="false">
+        <vaadin-combo-box caption="命令選項：" width-full data-item-type="java.lang.String" _id="combCmd">
+         <option item="Option1">Option 1</option>
+         <option item="Option2">Option 2</option>
+         <option item="Option3">Option 3</option>
+        </vaadin-combo-box>
+       </vaadin-form-layout>
+       <vaadin-button icon="fonticon://Vaadin-Icons/e921" description="開始執行" plain-text _id="btnRun"></vaadin-button>
+      </vaadin-horizontal-layout>
+      <vaadin-horizontal-split-panel split-position="60%" _id="splitPane" :expand>
+       <vaadin-vertical-layout size-full margin="false" _id="layoutListCase"></vaadin-vertical-layout>
+       <vaadin-vertical-layout size-full margin="false" _id="layoutListFile"></vaadin-vertical-layout>
+      </vaadin-horizontal-split-panel>
+     </vaadin-vertical-layout>
+    </tab>
+   </vaadin-tab-sheet>
+  </vaadin-vertical-layout>
+ </body>
+</html>

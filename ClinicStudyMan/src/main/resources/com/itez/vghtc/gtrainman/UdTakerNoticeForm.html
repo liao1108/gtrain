@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-panel size-full>
+    <vaadin-vertical-layout style-name="margin-small base-color" size-full>
+     <vaadin-text-field caption="訓練單位承辦人姓名（多人時請用英文分號;區隔）" style-name="small" width-full _id="txtUdTakerNames"></vaadin-text-field>
+     <vaadin-text-field caption="訓練單位承辦人電子郵件（多人時請用英文分號;區隔）" style-name="small" width-full _id="txtUdTakerEmails"></vaadin-text-field>
+     <vaadin-rich-text-area caption="通知信內容" size-full _id="rtaContent" :expand></vaadin-rich-text-area>
+     <vaadin-button plain-text _id="btnSend" :right>
+       發送通知 
+     </vaadin-button>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+  </vaadin-vertical-layout>
+ </body>
+</html>

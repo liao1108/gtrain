@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-label style-name="h3 bold" width-full plain-text>
+     * Please upload the following documents as for the confirmation of your clinical training at Taichung Verterans General Hospital. 
+   </vaadin-label>
+   <vaadin-panel size-full :expand>
+    <vaadin-vertical-layout style-name="base-color" size-full>
+     <vaadin-css-layout style-name="cols-2" responsive size-full :expand>
+      <vaadin-vertical-layout spacing="false" size-full margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Your flight schedule:" style-name="my-image-border" size-full _id="frameFlight" :expand></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+      <vaadin-vertical-layout spacing="false" size-full margin="false">
+       <vaadin-browser-frame icon="fonticon://Vaadin-Icons/e761" caption="Your health insurance (over NT$1,000,000)" style-name="my-image-border" size-full _id="frameInsurance" :expand></vaadin-browser-frame>
+      </vaadin-vertical-layout>
+     </vaadin-css-layout>
+    </vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-button style-name="primary" width-full plain-text _id="btnSubmit">
+     Submit 
+   </vaadin-button>
+  </vaadin-vertical-layout>
+ </body>
+</html>
